@@ -1,0 +1,24 @@
+      3 Essential Tools For The SQL Server administration
+-------------------------------------------------------------------------------------------------------------------------------------------------
+I have provided set up files for each application of three applications on my Github.
+As someone deeply involved in SQL Server development, I rely on a few essential tools that make my work smoother. While SQL Server Management Studio (SSMS)
+is fantastic for everyday tasks, there are times when I need to do more than just write queries and manage server objects. Here are my top three go-to tools
+for working with SQL Server:
+
+WinMerge - For Spotting Differences: Link: https://winmerge.org/downloads/?lang=en
+Often, I need to compare the content of two stored procedures or table definitions to find disparities. To make this task easier, I turn to WinMerge,
+a third-party open-source tool. It's straightforward and highlights where text in two files differs. While it offers advanced merging functions, I typically use
+it to identify distinctions between pieces of text.
+
+OnTopReplica - Maximizing Screen Space: Link: https://en.vessoft.com/software/windows/download/ontopreplica
+Screen real estate can be limited, especially when working on a single display or a lower-resolution projector. OnTopReplica comes to the rescue by allowing you
+to keep a selected window on top of all others. This is incredibly helpful when I need to reference some code or text while working in another window. It even lets
+you crop and resize the window, showing only what's relevant. Plus, it's live, making it perfect for magnifying SSMS result sets during presentations.
+
+ScreenToGif - Animated Explanations: Link: https://www.screentogif.com/
+Sometimes, explaining concepts with pictures isn't enough. An animated touch can be far more effective. ScreenToGif is an open-source screen capture tool that excels
+at turning recorded videos into GIF animations. It also offers the flexibility to edit individual frames, allowing you to add text, graphics, and even keyboard shortcuts
+for clearer explanations.
+
+In the world of SQL Server development, these three tools are my trusty companions. They simplify the process of spotting differences, maximize screen space, and enhance
+explanations with animated GIFs. Incorporating them into your workflow can make your SQL Server development tasks more efficient and visually engaging.
