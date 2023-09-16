@@ -1,0 +1,61 @@
+Deploy a SQL Server 2022 Container with Docker
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Setting up a SQL Server database has never been easier than with Docker. With a containerized version of SQL Server, you can run the database server anywhere you can install Docker,
+making it a versatile choice for developers on various platforms. In this guide, we'll walk you through the process of setting up a SQL Server 2022 container in less than 10 minutes.
+
+Getting Started
+Before we dive in, ensure you have Docker installed on your system. Once Docker is up and running, follow these steps:
+
+Create a Docker Compose File
+Create a docker-compose.yaml file with the necessary configuration to set up your SQL Server container. This configuration includes specifying the Linux OS and configuring persistent
+data storage with volumes. Additionally, you can change the SA password to enhance security.
+
+Start the Container
+In your terminal, navigate to the directory containing your docker-compose.yaml file and execute the following command:
+
+docker-compose up -d
+This command will start the SQL Server container in detached mode, allowing it to run in the background. Depending on your database, it might take about a minute for the SQL Server to start.
+
+Connect to SQL Server
+Once the container is up and running, you can connect to SQL Server using the 'sa' account and the password you set in the compose.yaml file. The SQL Server instance will be available on
+port 1433.
+
+Inspecting the Container
+Since we are running SQL Server in a container, it's essential to gather some diagnostic information to understand its configuration fully.
+
+SQL Server Version
+
+To check the SQL Server version running in the container, you can execute the following SQL query:
+
+SELECT @@version;
+This will provide you with information about the SQL Server version currently in use. In this example, it's Microsoft SQL Server 2022.
+
+Hardware and Core Information
+To get insights into the hardware and core information of the containerized SQL Server, you can run the following query:
+
+SELECT 
+    cpu_count, 
+    physical_memory_kb, 
+    sqlserver_start_time,
+    virtual_machine_type_desc,
+    socket_count,
+    cores_per_socket,
+    container_type_desc 
+FROM sys.dm_os_sys_info;
+This query will reveal details like the number of CPUs, physical memory, virtual machine type, and more. Understanding the underlying hardware can be valuable for optimizing SQL Server performance within the container.
+
+Compatibility Level
+Check the compatibility level of the database within the container:
+
+SELECT 
+    name, 
+    compatibility_level, 
+    state_desc
+FROM sys.databases;
+This query will show you the compatibility level of each database, which can be important when migrating or managing databases within the SQL Server container.
+
+With this information, you have a better grasp of your SQL Server container's configuration and can confidently manage and utilize it for your database needs. Docker has indeed 
+made it easier than ever to set up and run SQL Server instances, offering flexibility and portability to your database environments.
+
+In just a few steps, you can have a SQL Server 2022 container up and running, ready to serve your database requirements. So whether you're on a Macbook, Windows machine, or any platform
+that supports Docker, you can quickly set up a SQL Server database for your projects. Happy containerizing!
